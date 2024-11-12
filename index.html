@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevHandler</title>
-</head>
-<body>
-    Test
-</body>
+    <style>
+      body {
+        margin: 0;
+        background-color: #222222;
+      }
+      .content-container {
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background-color: transparent;
+        z-index: 2;
+        backdrop-filter: blur(50px);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .corner {
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        opacity: 0.5;
+      }
+
+      .top-left {
+        top: 0;
+        left: 0;
+        background: #0063f8;
+        border-radius: 0% 20% 60% 20%;
+      }
+
+      .right-bottom {
+        right: 0;
+        bottom: 0;
+        border-radius: 60% 20% 0% 20%;
+        background: #52edb6;
+      }
+
+      li {
+        display: block;
+        font-size: 40px;
+        font-family: "Courier New", monospace;
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+      a:hover {
+        color: #52edb6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-left corner"></div>
+    <div class="content-container">
+      <div class="content">
+        <img src="images/main-logo.png" alt="DevHanlder" />
+        <ul>
+          <li>- Adobe Experience Consulting Company -</li>
+          <li>- Site Under Construction -</li>
+          <li><a href="mailto:yevhen.kliakhin@devhandler.com">- Contact Us -</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="right-bottom corner"></div>
+  </body>
 </html>
